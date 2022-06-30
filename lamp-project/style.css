@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  scroll-behavior: smooth;
+}
+  /* .back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    
+  } */
+.hero {
+  background-image: url(images/brennan-burling-ay53qag90W8-unsplash.jpg);
+  min-height: 100vh;
+  width: 100%;
+  color: #fff;
+  position: relative;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+}
+nav {
+  display: flex;
+  align-items: center;
+  padding: 20px 8%;
+  position: fixed;
+  background-color: #0000005c;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+nav .menu-img {
+  width: 25px;
+  margin: 20px;
+  cursor: pointer;
+}
+nav .logo {
+  width: 160px;
+  cursor: pointer;
+}
+nav ul {
+  flex: 1;
+  text-align: right;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 20px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+}
+button {
+  background: #efefef;
+  height: 30px;
+  width: 60px;
+  border-radius: 20px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+button span {
+  display: block;
+  background: #999;
+  height: 25px;
+  width: 26px;
+  border-radius: 50%;
+  margin-left: 2px;
+  transition: background 0.5s, margin-left 0.5s;
+}
+.lamp-container {
+  position: absolute;
+  top: -20px;
+  left: 22%;
+  width: 200px;
+}
+.lamp {
+  width: 100%;
+}
+.light {
+  position: absolute;
+  top: 98%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  margin-left: -10px;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.text-container {
+  max-width: 600px;
+  margin-top: 7%;
+  margin-left: 50%;
+}
+.text-container h1 {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 20px;
+  color: #00986f;
+}
+.text-container a {
+  text-decoration: none;
+  background: #00986f;
+  padding: 14px 40px;
+  display: inline-block;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 30px;
+  border-radius: 30px;
+}
+.Conrol {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 150px;
+}
+.Conrol .Line {
+  width: 250px;
+  height: 4px;
+  background: #fff;
+  margin: 0 20px;
+  border-radius: 2px;
+}
+.Conrol .Line span {
+  width: 50%;
+  height: 8px;
+  margin-top: -2px;
+  border-radius: 4px;
+  background: #00986f;
+  display: block;
+}
+.active {
+  background: green;
+}
+.active span {
+  background: #fff;
+  margin-left: 31px;
+}
+.on {
+  height: 419px;
+}
+
+.sidebar {
+    position: fixed;
+    width: 400px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    top: 0;
+    left: 0;
+    transform: translateX(-400px);
+    transition: .3s ease;
+}
+@media only screen and (max-width:700px){
+  nav ul{
+    width: 100%;
+    background: linear-gradient(#ff54a2, #ff575a);
+    position: absolute;
+    top: 75px;
+    right: 0;
+    z-index: 2;
+  }
+  nav ul li{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  nav ul li a{
+    color: fff;
+  }
+}

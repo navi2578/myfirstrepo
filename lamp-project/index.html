@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Lamp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- <video autoplay loop muted plays-inline class="back-video">
+        <source src="images/Skyscrapers - 91744.mp4" type="video/mp4"> 
+
+    </video> -->
+    <nav>
+        <img src="images/menu.png" class="menu-img">
+        <img src="images/logo.png" class="logo">
+        <ul>
+            <li><a href="#latest">Latest</a></li>
+            <li><a href="#modern">Modern</a></li>
+            <li><a href="#cont">Contemporary</a></li>
+            <li><a href="#aff">Affordable</a></li>
+        </ul>
+        <button type="button"  id="btn"><span></span></button>
+    </nav>
+
+    <div class="hero" id="latest">
+        <div class="lamp-container">
+            <img src="images/lamp.png" class="lamp">
+            <div class="light" id="light1">
+                <img src="images/light.png" style="width: 100%">
+            </div>
+        </div>
+
+        <div class="text-container">
+            <h1>Latest <br> Home Lights</h1>
+            <p>This is first lamp from our company. we're making a huge
+                collection of modern lamps in all categories from home use to office
+                use</p>
+            <a>Check All Collections</a>
+            <div class="Conrol">
+                <p>04</p>
+                <div class="Line"><span></span></div>
+                <p>05</p>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="hero" id="modern">
+        <div class="lamp-container">
+            <img src="images/lamp.png" class="lamp">
+            <div class="light" id="light">
+                <img src="images/light.png" style="width: 100%">
+            </div>
+        </div>
+
+        <div class="text-container">
+            <h1>Latest<br> Modern</h1>
+            <p>This is first lamp from our company. we're making a huge
+                collection of modern lamps in all categories from home use to office
+                use</p>
+            <a>Check All Collections</a>
+            <div class="Conrol">
+                <p>04</p>
+                <div class="Line"><span></span></div>
+                <p>05</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero" id="cont">
+        <div class="lamp-container">
+            <img src="images/lamp.png" class="lamp">
+            <div class="light" id="light">
+                <img src="images/light.png" style="width: 100%">
+            </div>
+        </div>
+
+        <div class="text-container">
+            <h1>Latest<br> Contemporary</h1>
+            <p>This is first lamp from our company. we're making a huge
+                collection of modern lamps in all categories from home use to office
+                use</p>
+            <a>Check All Collections</a>
+            <div class="Conrol">
+                <p>04</p>
+                <div class="Line"><span></span></div>
+                <p>05</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero" id="aff">
+        <div class="lamp-container">
+            <img src="images/lamp.png" class="lamp">
+            <div class="light" id="light1">
+                <img src="images/light.png" style="width: 100%">
+            </div>
+        </div>
+
+        <div class="text-container">
+            <h1>Latest <br> Affordable</h1>
+            <p>This is first lamp from our company. we're making a huge
+                collection of modern lamps in all categories from home use to office
+                use</p>
+            <a>Check All Collections</a>
+            <div class="Conrol">
+                <p>04</p>
+                <div class="Line"><span></span></div>
+                <p>05</p>
+            </div>
+        </div>
+
+    <div class="sidebar" id="sidebar" data-name="sidebar"></div>
+    
+    <script>
+        var btn = document.getElementById("btn");
+        var light = document.querySelector(".light");
+
+        const menuBtn = document.querySelector('.menu-img');
+        const sidebar = document.querySelector('[data-name=sidebar]');
+
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            sidebar.style.transform = 'translateX(0)';
+        })
+        document.addEventListener('click', () => {
+            sidebar.style.transform = 'translateX(-400px)';
+        })
+
+        btn.addEventListener('click', toggleBtn)
+
+        function toggleBtn() {
+            btn.classList.toggle("active")
+            light.classList.toggle("on")
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
