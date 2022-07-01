@@ -25,7 +25,7 @@
             <li><a href="#cont">Contemporary</a></li>
             <li><a href="#aff">Affordable</a></li>
         </ul>
-        <button type="button"  id="btn"><span></span></button>
+        <button type="button" id="btn"><span></span></button>
     </nav>
 
     <div class="hero" id="latest">
@@ -43,14 +43,13 @@
                 use</p>
             <a>Check All Collections</a>
             <div class="Conrol">
-                <p>04</p>
-                <div class="Line"><span></span></div>
-                <p>05</p>
+                <input style="width: 60%;margin-right: auto;" type="range" min="1" max="100" value="50"
+                    id="inputBrightness">
             </div>
         </div>
-        
+
     </div>
-    
+
     <div class="hero" id="modern">
         <div class="lamp-container">
             <img src="images/lamp.png" class="lamp">
@@ -66,9 +65,8 @@
                 use</p>
             <a>Check All Collections</a>
             <div class="Conrol">
-                <p>04</p>
-                <div class="Line"><span></span></div>
-                <p>05</p>
+                <input style="width: 60%;margin-right: auto;" type="range" min="1" max="100" value="50"
+                id="inputBrightness">               
             </div>
         </div>
     </div>
@@ -88,9 +86,8 @@
                 use</p>
             <a>Check All Collections</a>
             <div class="Conrol">
-                <p>04</p>
-                <div class="Line"><span></span></div>
-                <p>05</p>
+                <input style="width: 60%;margin-right: auto;" type="range" min="1" max="100" value="50"
+                id="inputBrightness">
             </div>
         </div>
     </div>
@@ -110,39 +107,46 @@
                 use</p>
             <a>Check All Collections</a>
             <div class="Conrol">
-                <p>04</p>
-                <div class="Line"><span></span></div>
-                <p>05</p>
+                <input style="width: 60%;margin-right: auto;" type="range" min="1" max="100" value="50"
+                id="inputBrightness">
             </div>
         </div>
 
-    <div class="sidebar" id="sidebar" data-name="sidebar"></div>
-    
-    <script>
-        var btn = document.getElementById("btn");
-        var light = document.querySelector(".light");
-
-        const menuBtn = document.querySelector('.menu-img');
-        const sidebar = document.querySelector('[data-name=sidebar]');
-
-        menuBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            sidebar.style.transform = 'translateX(0)';
-        })
-        document.addEventListener('click', () => {
-            sidebar.style.transform = 'translateX(-400px)';
-        })
-
-        btn.addEventListener('click', toggleBtn)
-
-        function toggleBtn() {
-            btn.classList.toggle("active")
-            light.classList.toggle("on")
-        }
+        <div class="sidebar" id="sidebar" data-name="sidebar"></div>
 
 
+        <script>
+            var btn = document.getElementById("btn");
+            var light = document.querySelector(".light");
 
-    </script>
+            const menuBtn = document.querySelector('.menu-img');
+            const sidebar = document.querySelector('[data-name=sidebar]');
+            const inputBrightness = document.querySelector('#inputBrightness');
+
+            inputBrightness.addEventListener('input', function() {
+                light.style.opacity = this.value / 100
+            })
+
+            menuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                sidebar.style.transform = 'translateX(0)';
+            })
+
+            document.addEventListener('click', () => {
+                sidebar.style.transform = 'translateX(-400px)';
+            })
+
+
+            function toggleBtn() {
+                btn.classList.toggle("active")
+                light.classList.toggle("on")
+            }
+
+            btn.onclick = toggleBtn
+
+
+
+        </script>
 
 </body>
 
